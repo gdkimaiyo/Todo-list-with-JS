@@ -14,6 +14,7 @@ Find a preview here: **`Please await a preview link`**
 - Delete a task
 - Edit/Update a task
 - Delete all tasks
+- Persist Data using Web Storage
 
 ## Setup project on your PC
 
