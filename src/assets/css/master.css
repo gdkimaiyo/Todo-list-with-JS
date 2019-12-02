@@ -24,15 +24,53 @@ ol {
   padding: 0;
 }
 ol li {
-  padding: 6px;
+  padding: 10px;
   width: 100%;
-}
-ol li:nth-child(odd) {
-  background-color: #ccc;
+  display: flex;
+  align-items: center;
 }
 ol li span {
   padding-left: 6px;
 }
+ol li:nth-child(odd) {
+  background-color: #ccc;
+}
+.done span {
+  text-decoration: line-through;
+}
+.check {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #fffafa;
+  border: 2px solid #696969;
+}
+.check::before {
+  content: '\2713';
+  display: none;
+  font-size: 20px;
+}
+.done .check::before {
+  display: inline;
+}
+
+.danger-btn {
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  padding-top: 4px;
+  font-weight: bold;
+  margin-right: 14px;
+  border-radius: 4px;
+  background-color: #ff5349;
+}
+
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -53,9 +91,12 @@ header {
 }
 input[type=text] {
   width: 100%;
-  padding: 6px;
-  border: 2px solid #000;
+  padding: 8px;
+  border: 2px solid #696969;
   border-radius: 2px;
+}
+input[type=checkbox] {
+  display: none;
 }
 /* end of Mobile first design */
 
