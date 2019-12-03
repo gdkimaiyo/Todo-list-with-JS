@@ -1,4 +1,4 @@
-# Todo-list-with-JS
+# todo-list-app-with-js
 
 A simple Todo List Web App using Vanilla Javascript
 
