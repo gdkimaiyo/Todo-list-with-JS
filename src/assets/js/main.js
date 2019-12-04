@@ -2,6 +2,7 @@
 const form = document.querySelector('form');
 const ol = document.querySelector('ol');
 const input = document.querySelector('#todoItem');
+const msg = document.querySelector('.message-prompt');
 // Other Variables
 let allTodos;
 
@@ -13,6 +14,11 @@ if (localStorage.getItem("todos")) {
 
 // assign allTodos
 localStorage.setItem("todos",JSON.stringify(allTodos));
+if (allTodos.length === 0) {
+  msg.style.display = 'block';
+} else {
+  msg.style.display = 'none';
+}
 
 // localStorage.clear();
 
@@ -26,6 +32,9 @@ form.addEventListener('submit', (e) => {
       // Reset and focus input
       input.value = "";
       input.focus();
+      if (allTodos.length !== 0) {
+        msg.style.display = 'none';
+      }
     }
   } else {
     // No web storage Support.
@@ -34,7 +43,6 @@ form.addEventListener('submit', (e) => {
 });
 
 // Display all existing information
-console.log(allTodos);
 allTodos.forEach(item => {
   todoGenerator(item.task,item.id,item.completed);
 });
@@ -67,7 +75,6 @@ function addTodos(text) {
     completed: false
   };
   allTodos.push(newTodo);
-  console.log(newTodo);
 
   localStorage.setItem("todos",JSON.stringify(allTodos));
   todoGenerator(newTodo.task, newTodo.id, newTodo.completed);
@@ -125,4 +132,10 @@ function deleteTask(key) {
   localStorage.setItem("todos",JSON.stringify(allTodos));
   const item = document.querySelector(`[data-key='${key}']`);
   item.remove();
+
+  if (allTodos.length === 0) {
+    msg.style.display = 'block';
+  } else {
+    msg.style.display = 'none';
+  }
 }

@@ -5,6 +5,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+header, .todos-title, .message-prompt {
+  font-family: Roboto, sans-serif;
+}
 li {
   list-style-type: none;
 }
@@ -71,6 +74,16 @@ ol li:nth-child(odd) {
   background-color: #ff5349;
 }
 
+/* message prompt state */
+.message-prompt {
+  display: none;
+}
+.message-prompt-title {
+  color: #dc3545
+}
+.info {
+  color: #17a2b8;
+}
 
 main {
   display: flex;

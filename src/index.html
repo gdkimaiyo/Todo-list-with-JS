@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>Todo List App</title>
 
     <link rel="stylesheet" href="./assets/css/master.css">
   </head>
@@ -22,7 +22,12 @@
           <form class="">
             <input id="todoItem" type="text" name="" value="" placeholder="New Todo Task...">
           </form>
-          <h4>Todos</h4>
+          <h3 class="todos-title">Todo</h3>
+          <!-- Empty state -->
+          <div class="message-prompt">
+            <h4 class="message-prompt-title">No todos.</h4>
+            <p class="info">Add a new todo task...</p>
+          </div>
           <ol class="todo-list">
             <!-- Todo Tasks goes here -->
           </ol>
