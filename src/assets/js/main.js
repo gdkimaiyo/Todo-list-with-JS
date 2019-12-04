@@ -39,14 +39,21 @@ allTodos.forEach(item => {
   todoGenerator(item.task,item.id,item.completed);
 });
 
-// Mark Todo task as complete
+// Delete or Mark/check a tast as complete
 const list = document.querySelector('.todo-list');
 list.addEventListener('click', (e) => {
   e.preventDefault();
 
+  // Mark Todo task as complete
   if (e.target.classList.contains('to-check')) {
     const todoKey = e.target.parentElement.dataset.key;
     taskCompleted(todoKey);
+  }
+
+  // Delete/Remove a task
+  if (e.target.classList.contains('to-delete')) {
+    const todoKey = e.target.parentElement.dataset.key;
+    deleteTask(todoKey);
   }
 });
 
@@ -111,4 +118,11 @@ function taskCompleted(key) {
   } else {
     item.classList.remove('done');
   }
+}
+// Delete a task
+function deleteTask(key) {
+  allTodos =  allTodos.filter(item => item.id !== Number(key));
+  localStorage.setItem("todos",JSON.stringify(allTodos));
+  const item = document.querySelector(`[data-key='${key}']`);
+  item.remove();
 }
