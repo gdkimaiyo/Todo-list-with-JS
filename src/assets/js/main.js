@@ -36,7 +36,7 @@ form.addEventListener('submit', (e) => {
 // Display all existing information
 console.log(allTodos);
 allTodos.forEach(item => {
-  todoGenerator(item.task,item.id);
+  todoGenerator(item.task,item.id,item.completed);
 });
 
 // Mark Todo task as complete
@@ -63,13 +63,18 @@ function addTodos(text) {
   console.log(newTodo);
 
   localStorage.setItem("todos",JSON.stringify(allTodos));
-  todoGenerator(newTodo.task, newTodo.id);
+  todoGenerator(newTodo.task, newTodo.id, newTodo.completed);
 }
 
 // Todo Generator
-function todoGenerator(todo,id) {
+function todoGenerator(todo,id,completed) {
   const li = document.createElement('li');
   li.setAttribute('data-key',id);
+  if (completed) {
+    li.classList.add('done');
+  } else {
+    li.classList.remove('done');
+  }
 
   // checkbox
   const checkbox = document.createElement('input');
@@ -96,8 +101,9 @@ function todoGenerator(todo,id) {
 
 // Task completed method
 function taskCompleted(key) {
-  const indx = allTodos.findIndex(item => item.id === Number(key));
+  const indx = key-1;
   allTodos[indx].completed = !allTodos[indx].completed;
+  localStorage.setItem("todos",JSON.stringify(allTodos));
 
   const item = document.querySelector(`[data-key='${key}']`);
   if (allTodos[indx].completed) {
