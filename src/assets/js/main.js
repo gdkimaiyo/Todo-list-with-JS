@@ -14,6 +14,7 @@ if (localStorage.getItem("todos")) {
 
 // assign allTodos
 localStorage.setItem("todos",JSON.stringify(allTodos));
+// display message-prompt
 if (allTodos.length === 0) {
   msg.style.display = 'block';
 } else {
@@ -32,6 +33,7 @@ form.addEventListener('submit', (e) => {
       // Reset and focus input
       input.value = "";
       input.focus();
+      // Hide prompt message
       if (allTodos.length !== 0) {
         msg.style.display = 'none';
       }
