@@ -2,7 +2,7 @@
 
 A simple Todo List Web App using Vanilla Javascript
 
-Find a preview here: [Preview](https://todo-list-app-gdkimaiyo.netlify.com)
+Find a preview here: [Preview](https://gdkimaiyo.github.io/todo-list-app-with-js/)
 
 ## Application functionalities
 
