@@ -9,11 +9,10 @@ Find a preview here: **`Please await a preview link`**
 - Add a new Todo task
 - Show/Display all tasks
 - Check/Mark a task as complete
-- Sort tasks by due date
-- Show/Hide completed tasks
 - Delete a task
 - Edit/Update a task
-- Delete all tasks
+- Add due date to a task
+- Sort tasks by due date
 - Persist Data using Web Storage
 
 ## Setup project on your PC
@@ -34,12 +33,11 @@ https://github.com/gdkimaiyo/Todo-list-with-JS.git
 - [x] Add a new Todo task
 - [x] Show/Display all tasks
 - [x] Check/Mark a task as complete
-- [ ] Delete a task
-- [ ] Delete all tasks
-- [ ] Show/Hide completed tasks
+- [x] Delete a task
 - [ ] Edit/Update a task
 - [ ] Add due date to a task
 - [ ] Sort tasks by due date
+- [x] Persist Data using Web Storage
 
 ## License
 
