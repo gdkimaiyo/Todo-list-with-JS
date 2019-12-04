@@ -14,6 +14,7 @@ Find a preview here: **`Please await a preview link`**
 - Add due date to a task
 - Sort tasks by due date
 - Persist Data using Web Storage
+- Account for empty state.
 
 ## Setup project on your PC
 
@@ -38,6 +39,7 @@ https://github.com/gdkimaiyo/Todo-list-with-JS.git
 - [ ] Add due date to a task
 - [ ] Sort tasks by due date
 - [x] Persist Data using Web Storage
+- [x] Account for empty state
 
 ## License
 
