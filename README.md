@@ -22,7 +22,7 @@ Find a preview here: [preview](https://gdkimaiyo.github.io/todo-list-app-with-js
 - Clone the repository by running
 
 ```
-https://github.com/gdkimaiyo/Todo-list-with-JS.git
+https://github.com/gdkimaiyo/todo-list-app-with-js.git
 ```
 
 - **`cd`** into the project files and ```do your thing. You know what to do, right?```
