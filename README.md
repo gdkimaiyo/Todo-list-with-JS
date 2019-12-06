@@ -10,7 +10,6 @@ Find a preview here: [Preview](https://gdkimaiyo.github.io/todo-list-app-with-js
 - Show/Display all tasks
 - Check/Mark a task as complete
 - Delete a task
-- Edit/Update a task
 - Add due date to a task
 - Sort tasks by due date
 - Persist Data using Web Storage
@@ -35,7 +34,6 @@ https://github.com/gdkimaiyo/todo-list-app-with-js.git
 - [x] Show/Display all tasks
 - [x] Check/Mark a task as complete
 - [x] Delete a task
-- [ ] Edit/Update a task
 - [ ] Add due date to a task
 - [ ] Sort tasks by due date
 - [x] Persist Data using Web Storage
